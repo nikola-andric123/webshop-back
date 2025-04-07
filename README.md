@@ -10,7 +10,7 @@
 1. [About The Project](#about)  
 2. [Built With](#built-with)  
 3. [Architecture & Design](#architecture--design)  
-4. [Getting Started](#getting-started)  
+4. [Details](#details)  
    - [Prerequisites](#prerequisites)  
    - [Installation](#installation)  
    - [Running the Server](#running-the-server)  
@@ -31,29 +31,32 @@
 <a name="about"></a>
 ### 📖 About The Project
 
-Describe in 2–3 sentences **why** you built this and **what** it does:
-- **Purpose:** e.g., “To demonstrate a secure, production-ready REST API for an e‑commerce backend…”
-- **Key features:** JWT authentication, role-based access, product/catalog management, order processing.
+Short description:
+- **Purpose:** To demonstrate a simple and secure, production-ready REST API for an e‑commerce backend…
+- **Key features:** JWT authentication, role-based access, DB connection, shopping cart product/catalog management, order processing.
 
+<a name="built-with"></a>
 ### 🛠️ Built With
 
-List major frameworks, libraries, and tools:
+List of major frameworks, libraries, and tools:
 - [Spring Boot](https://spring.io/projects/spring-boot)  
 - [Spring Security](https://spring.io/projects/spring-security)  
 - [JSON Web Tokens (JWT)](https://jwt.io/)  
 - [MySQL](https://www.mysql.com/)  
-- [Maven](https://maven.apache.org/)  
-- (Optional) [Docker](https://www.docker.com/)  
 
-## 🏗️ Architecture & Design
+<a name="architecture--design"></a>
+### 🏗️ Architecture & Design
 
-Briefly outline your project’s structure and key design decisions:
+Brief outline of project’s structure and key design decisions:
 - **Layers:** Controller → Service → Repository  
-- **Security:** JWT filter, `UserDetailsService`, role hierarchy  
-- **Persistence:** Entities, JPA repositories, Flyway/Liquibase (if used)  
-- **Error handling:** Global `@ControllerAdvice`  
+- **Security:** JWT filter, `UserDetailsService`, Password encryption   
+- **Persistence:** Entities, JPA repositories  
+- **Error handling:** Custom exceprions like: `ResourceNotFoundException`, `ProductNotFoundException`...    
 
-## 🚀 Getting Started
+<a name="details"></a>
+### 🔍 Details
+- **Entities:** User, Role, Product, Category, Image, Order, OrderItem, Cart, CartItem
+- **EER Diagram**:
 
 ### Prerequisites
 
